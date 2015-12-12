@@ -1,6 +1,29 @@
-#! /bin/bash
+#! /bin/sh
 
-if [[ $(cat ~/.bashrc | grep -c ALIASMYSQL) == 1 ]]; then
+# Code to colour output copied from oh-my-zsh: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+
+# Use colors, but only if connected to a terminal, and that terminal
+# supports them.
+if which tput >/dev/null 2>&1; then
+    ncolors=$(tput colors)
+fi
+if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
+  RED="$(tput setaf 1)"
+  GREEN="$(tput setaf 2)"
+  YELLOW="$(tput setaf 3)"
+  BLUE="$(tput setaf 4)"
+  BOLD="$(tput bold)"
+  NORMAL="$(tput sgr0)"
+else
+  RED=""
+  GREEN=""
+  YELLOW=""
+  BLUE=""
+  BOLD=""
+  NORMAL=""
+fi
+
+if [ $(cat ~/.bashrc | grep -c ALIASMYSQL) -eq 1 ]; then
     # Alias already present
     exit 0
 else
@@ -14,7 +37,7 @@ fi
 # Create ~/.lesskey file if not already present
 touch ~/.lesskey
 
-if [[ $(cat ~/.lesskey | grep -c ALIASMYSQL) == 1 ]]; then
+if [ $(cat ~/.lesskey | grep -c ALIASMYSQL) -eq 1 ]; then
     # Alias already present
     exit 0
 else
@@ -26,3 +49,5 @@ EOF
 fi
 
 lesskey
+
+printf "${GREEN}You are all set to view MySQL tables the way you should :)${NORMAL}\n"
