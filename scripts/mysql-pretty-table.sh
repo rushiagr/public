@@ -24,7 +24,7 @@ main() {
 
   if [ $(cat ~/.bashrc | grep -c ALIASMYSQL) -eq 1 ]; then
       # Alias already present
-      exit 0
+      :
   else
       cat >> ~/.bashrc <<EOF
 # ALIASMYSQL
@@ -38,7 +38,7 @@ EOF
 
   if [ $(cat ~/.lesskey | grep -c ALIASMYSQL) -eq 1 ]; then
       # Alias already present
-      exit 0
+      :
   else
       cat >> ~/.lesskey <<EOF
 # ALIASMYSQL
