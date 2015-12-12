@@ -31,7 +31,6 @@ main() {
 # Alias to make mysql tables more usable
 alias mysql='mysql --pager="less --chop-long-lines --quit-if-one-screen --no-init"'
 EOF
-alias mysql='mysql --pager="less --chop-long-lines --quit-if-one-screen --no-init"'
   fi
 
   # Create ~/.lesskey file if not already present
