@@ -1,5 +1,3 @@
-#! /bin/sh
-
 # Code to colour output copied from oh-my-zsh: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 
 # Use colors, but only if connected to a terminal, and that terminal
