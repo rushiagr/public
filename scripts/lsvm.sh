@@ -1,3 +1,8 @@
+# Run as:
+# sudo sh -c "$(wget -q https://raw.githubusercontent.com/rushiagr/public/master/scripts/lsvm.sh -O -)"
+
+
+
 main() {
     # Code to colour output copied from oh-my-zsh: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 
@@ -29,7 +34,7 @@ main() {
         exit
     fi
 
-    printf "${GREEN}Installing python packages awscli boto3 prettytable ...${NORMAL}\n"
+    printf "${GREEN}Installing python packages awscli, boto3 and prettytable ...${NORMAL}\n"
     sleep 2
     sudo pip install awscli boto3 prettytable
     printf "${GREEN}Please provide your aws access and secret key.${NORMAL}\n"
