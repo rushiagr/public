@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Description: script which helps in installation of citrix receiver for
+# Reliance on an ubuntu machine
+
 # Download icaclient debian package, and pass that as the first param to this
 # file
 
@@ -7,7 +10,7 @@
 # certificates by pressing spacebar.
 
 # TODO(rushiagr): might need to install ubuntu's 'openssl' package, or maybe
-# some more packages
+# some more packages. Lemme know if you find the exact package names
 
 sudo dpkg --add-architecture i386
 sudo apt-get update
